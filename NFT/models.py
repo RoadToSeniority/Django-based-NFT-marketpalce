@@ -1,6 +1,9 @@
-from unicodedata import name
 from django.db import models
-from enum import Enum
+from django.contrib.auth import get_user_model
+
+# Register your models here.
+
+user = get_user_model()
     
 class NFT(models.Model):
 
@@ -15,6 +18,7 @@ class NFT(models.Model):
     UpdatedAt = models.DateTimeField(auto_now=True)
     CreatedAt = models.DateTimeField(auto_now_add=True)
     LastPrice = models.DecimalField(max_digits=6, decimal_places=2)
+    owner = models.ForeignKey(user, on_delete=models.CASCADE, default=1)
 
 class Price(models.Model):
     IRL = models.DecimalField(max_digits=6, decimal_places=2)

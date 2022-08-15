@@ -1,9 +1,10 @@
+## day #1
 - Django mvt
 - Django managment tool (django-admin)
 - urls.py
 - async or syncronouse
 - what is app
-- _django-admin startapp_
+- ```django-admin startapp```
 - mostly the main requirment of a app is user
 - modules in a app directory
 - migration folder for additional models
@@ -14,11 +15,40 @@
 - adding app to INSTALLED_APPS in setting.py
 - adding AUTH_USER_MODEL = 'user.MyUser' to setting.py
 - sqlite
-- adding all models with makemigrations command (_django-admin makemigrations_)
+- adding all models with makemigrations command (```django-admin makemigrations```)
 - app>migration>0001_initial.py
-- _django-admin migrate_
-- _django-admin createsuperuser_
+- ```django-admin migrate```
+- ```django-admin createsuperuser```
 - unique = True
-- _django-admin runserver_
-
+- ```django-admin runserver```
 - pipenv
+## day #2
+- created NFT app
+- new models to NFT app (ntf and price)
+- Django models supported fields
+- using DecimalField model of Django for price filed
+- CharField length limit is 255. for paragraph we use TextField
+- ```unique = True``` has too much overhead
+- ```auto_now()``` and ```auto_now_add()``` attributes of DateTimeField
+- ```max_digits()``` and ```decimal_palaces``` attributes of DecimalField
+- NULLability of fileds
+- primaryKey constrate
+- ChoiceField and how to implement it(`models.TextChoice`)
+- adding new model to admin panel (`admin.site.register(nft)`)
+## day #3
+- Django-shell
+- Juoyter notebook
+- ` pipenv install django-extensions --dev`
+- `python manage.py shell_plus --notebook`
+- .ipynb
+- absolute and relative import
+- working with Jupyter
+    - creating instance of model
+    - save() instance
+    - query the object
+- how to chang Juoyter kernel (Django shell-plus)
+- relations (one to one, one to many, many to many)
+- foreign key
+- adding owner attribute as foreign key
+- `on_delete = models.CASCADE`
+- how migration works

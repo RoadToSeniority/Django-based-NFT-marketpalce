@@ -1,3 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 
-# Create your views here.
+
+def login_form(request):
+    ...
+
+
+def recieving_sth_from_browser(request):
+    ...
+
+
+def sending_sth_to_browser(request):
+    ...
+
+
+def saying_hi_to_browser(request):
+    return HttpResponse("HI ^^")
